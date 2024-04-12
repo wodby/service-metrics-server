@@ -5,3 +5,9 @@ scalable: false
 hostname: metrics-server
 containers:
 - name: metrics-server
+
+helm:
+  name: metrics-server
+  source: https://kubernetes-sigs.github.io/metrics-server
+  chart: metrics-server/metrics-server
+  version: 3.12.1
