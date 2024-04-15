@@ -11,3 +11,7 @@ helm:
   source: https://kubernetes-sigs.github.io/metrics-server
   chart: metrics-server/metrics-server
   version: 3.12.1
+  configuration:
+    annotations: deploymentAnnotations
+    labels: labels
+    resources: resources
