@@ -16,7 +16,3 @@ helm:
     annotations: deploymentAnnotations
     labels: labels
     resources: resources
-  values:
-  - name: image.repository
-    value: registry.k8s.io/metrics-server/metrics-server
-
