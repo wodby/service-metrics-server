@@ -2,7 +2,6 @@ name: metrics-server
 title: Metrics server
 type: infrastructure
 scalable: false
-hostname: metrics-server
 containers:
 - name: metrics-server
 
