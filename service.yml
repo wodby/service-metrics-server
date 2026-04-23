@@ -2,16 +2,20 @@ name: metrics-server
 title: Metrics server
 type: infrastructure
 scalable: false
-containers:
-- name: metrics-server
-
 helm:
   name: metrics-server
   source: https://kubernetes-sigs.github.io/metrics-server
   chart: metrics-server/metrics-server
   version: 3.12.1
-  configurations:
-  - container: metrics-server
-    annotations: deploymentAnnotations
+workloads:
+- id: main
+  kind: deployment
+  primary: true
+  containers:
+  - name: metrics-server
+
+    helm:
+      resources: resources
+  helm:
     labels: labels
-    resources: resources
+    annotations: deploymentAnnotations
