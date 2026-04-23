@@ -7,15 +7,15 @@ helm:
   source: https://kubernetes-sigs.github.io/metrics-server
   chart: metrics-server/metrics-server
   version: 3.12.1
+
 workloads:
 - id: main
   kind: deployment
   primary: true
-  containers:
-  - name: metrics-server
-
-    helm:
-      resources: resources
   helm:
     labels: labels
     annotations: deploymentAnnotations
+  containers:
+  - name: metrics-server
+    helm:
+      resources: resources
