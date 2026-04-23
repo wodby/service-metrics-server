@@ -13,7 +13,7 @@ workloads:
   kind: deployment
   primary: true
   helm:
-    labels: labels
+    labels: podLabels
     annotations: deploymentAnnotations
   containers:
   - name: metrics-server
