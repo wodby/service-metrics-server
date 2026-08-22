@@ -7,6 +7,8 @@ helm:
   source: https://kubernetes-sigs.github.io/metrics-server
   chart: metrics-server/metrics-server
   version: 3.13.1
+  valueMappings:
+    strategy: updateStrategy
 
 workloads:
 - name: main
