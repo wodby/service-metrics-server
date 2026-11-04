@@ -1,5 +1,6 @@
 name: metrics-server
 title: Metrics server
+icon: metrics
 type: infrastructure
 scalable: false
 helm:
