@@ -23,5 +23,9 @@ workloads:
     annotations: deploymentAnnotations
   containers:
   - name: metrics-server
+    resources:
+      request:
+        cpu: 100
+        memory: 208
     helm:
       resources: resources
